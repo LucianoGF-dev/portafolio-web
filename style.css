@@ -1,3 +1,71 @@
+/* Modal de Proyecto */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: var(--text);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.close-modal:hover {
+    color: var(--accent);
+}
+
+.modal-images {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.modal-images img {
+    max-width: 180px;
+    max-height: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    background: #222;
+}
+
+.modal-images img:hover {
+    transform: scale(5);
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0,255,136,0.4);
+    transition: 1s;
+}
 :root {
     --primary: #00ff88;
     --primary-dark: #00cc6a;
@@ -532,6 +600,13 @@ footer {
         padding: 20px;
         backdrop-filter: blur(var(--blur-intensity));
     }
+
+    .modal-images img:hover {
+    transform: scale(2);
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0,255,136,0.4);
+    transition: 1s;
+}
 
     .nav-links.active {
         display: flex;
