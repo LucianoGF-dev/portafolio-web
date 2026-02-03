@@ -277,6 +277,23 @@ nav {
     font-size: 1.5rem;
 }
 
+.lang-btn {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 20px;
+}
+
+.lang-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
 /* Secciones */
 section {
     padding: 100px 0;
@@ -693,7 +710,7 @@ footer {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 130px;
+        top: 85px;
         left: 0;
         width: 100%;
         background: rgba(10, 10, 10, 0.95);

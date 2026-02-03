@@ -1,29 +1,274 @@
-// Inicializar EmailJS (reemplaza con tu userID de EmailJS)
-emailjs.init('iue1o-aumZvmMhLaV');
+// Objeto de traducciones
+const translations = {
+    es: {
+        nav: {
+            about: "Acerca de mí",
+            skills: "Habilidades",
+            education: "Educación",
+            projects: "Proyectos",
+            contact: "Contacto"
+        },
+        hero: {
+            title: "Desarrollador Full Stack",
+            description: "Creando soluciones digitales innovadoras con tecnologías modernas y un enfoque centrado en el usuario.",
+            btn: "Ver Proyectos"
+        },
+        about: {
+            title: "Acerca de mí",
+            history: {
+                title: "Mi Historia",
+                desc: "Soy un desarrollador apasionado con 3 años de experiencia en el desarrollo de aplicaciones web. Me especializo en crear soluciones eficientes y escalables utilizando las últimas tecnologías."
+            },
+            mission: {
+                title: "Mi Misión",
+                desc: "Transformar ideas en experiencias digitales que resuelvan problemas reales y generen valor para los usuarios y las empresas."
+            },
+            focus: {
+                title: "Mi Enfoque",
+                desc: "Combino creatividad, pensamiento lógico y atención al detalle para desarrollar productos."
+            }
+        },
+        skills: {
+            title: "Habilidades Técnicas",
+            languages: "Lenguajes de Programación",
+            frameworks: "Frameworks y Librerías",
+            soft: "Habilidades Blandas",
+            certifications: "Cursos y Certificaciones",
+            englishCert: {
+                title: "Inglés",
+                desc1: "Certificado de fortalecimiento de inglés",
+                desc2: "Certificado de examen Linguaskill B1 intermedio"
+            },
+            communication: {
+                title: "Comunicación",
+                desc: "Capacidad para comunicar ideas técnicas"
+            },
+            teamwork: {
+                title: "Trabajo en Equipo",
+                desc: "Colaboración efectiva en equipos multidisciplinarios"
+            },
+            critical: {
+                title: "Pensamiento crítico",
+                desc: "Enfoque analítico para resolver desafíos complejos"
+            },
+            listening: {
+                title: "Escucha activa",
+                desc: "Capacidad para comprender necesidades, ideas y emociones de los demás"
+            },
+            autonomy: {
+                title: "Autonomía",
+                desc: "Capacidad para organizar tareas, priorizar y tomar decisiones"
+            }
+        },
+        education: {
+            title: "Educación y Certificaciones",
+            university: {
+                title: "Universidad Tecnológica",
+                desc: "Tecnólogo en informática"
+            },
+            institute: {
+                title: "Instituto tecnológico Superior",
+                desc: "Bachiller en informática"
+            },
+            liceo: {
+                title: "Liceo Nº4 Manuel Oribe",
+                desc: "Ciclo Básico"
+            },
+            escuela: {
+                title: "Escuela Nº11 Miguel de Cervantes Saavedra",
+                desc: "Escuela Primaria"
+            }
+        },
+        projects: {
+            title: "Proyectos",
+            btn: "Ver Detalles",
+            donantes: {
+                title: "Aplicación gestión de donantes",
+                desc: "Plataforma desarrollada y pensada para estudiantes de hemoterapia del hospital de Paysandú."
+            },
+            transporte: {
+                title: "Aplicación de gestión para el sector de transporte.",
+                desc: "Componente diseñado para gestionar y administrar contactos así como datos correspondientes al sector transporte."
+            },
+            cartelera: {
+                title: "Cartelera digital para institución.",
+                desc: "Implementación pensada para administrar y visualizar cursos, grupos, turnos así como eventos y comunicados oficiales."
+            }
+        }
+    },
+    en: {
+        nav: {
+            about: "About Me",
+            skills: "Skills",
+            education: "Education",
+            projects: "Projects",
+            contact: "Contact"
+        },
+        hero: {
+            title: "Full Stack Developer",
+            description: "Creating innovative digital solutions with modern technologies and a user-centered approach.",
+            btn: "View Projects"
+        },
+        about: {
+            title: "About Me",
+            history: {
+                title: "My Story",
+                desc: "I am a passionate developer with 3 years of experience in web application development. I specialize in creating efficient and scalable solutions using the latest technologies."
+            },
+            mission: {
+                title: "My Mission",
+                desc: "Transform ideas into digital experiences that solve real problems and add value for users and companies."
+            },
+            focus: {
+                title: "My Approach",
+                desc: "I combine creativity, logical thinking, and attention to detail to develop products."
+            }
+        },
+        skills: {
+            title: "Technical Skills",
+            languages: "Programming Languages",
+            frameworks: "Frameworks and Libraries",
+            soft: "Soft Skills",
+            certifications: "Courses and Certifications",
+            englishCert: {
+                title: "English",
+                desc1: "English strengthening certificate",
+                desc2: "Linguaskill B1 intermediate exam certificate"
+            },
+            communication: {
+                title: "Communication",
+                desc: "Ability to communicate technical ideas"
+            },
+            teamwork: {
+                title: "Teamwork",
+                desc: "Effective collaboration in multidisciplinary teams"
+            },
+            critical: {
+                title: "Critical Thinking",
+                desc: "Analytical approach to solving complex challenges"
+            },
+            listening: {
+                title: "Active Listening",
+                desc: "Ability to understand the needs, ideas, and emotions of others"
+            },
+            autonomy: {
+                title: "Autonomy",
+                desc: "Ability to organize tasks, prioritize, and make decisions"
+            }
+        },
+        education: {
+            title: "Education and Certifications",
+            university: {
+                title: "Technological University",
+                desc: "Technologist in Computer Science"
+            },
+            institute: {
+                title: "Superior Technological Institute",
+                desc: "Bachelor in Computer Science"
+            },
+            liceo: {
+                title: "Liceo Nº4 Manuel Oribe",
+                desc: "Basic Cycle"
+            },
+            escuela: {
+                title: "Escuela Nº11 Miguel de Cervantes Saavedra",
+                desc: "Primary School"
+            }
+        },
+        projects: {
+            title: "Projects",
+            btn: "View Details",
+            donantes: {
+                title: "Blood Donor Management Application",
+                desc: "Platform developed and designed for hemotherapy students at Paysandú Hospital."
+            },
+            transporte: {
+                title: "Management Application for the Transportation Sector.",
+                desc: "Component designed to manage and administer contacts as well as data corresponding to the transportation sector."
+            },
+            cartelera: {
+                title: "Digital Billboard for Institution.",
+                desc: "Implementation designed to administer and visualize courses, groups, shifts as well as events and official communications."
+            }
+        }
+    }
+};
 
-// Envío de formulario de contacto con EmailJS
-const contactForm = document.querySelector('.contact-form form');
-const formStatus = document.getElementById('form-status');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        formStatus.textContent = '';
-        const formData = {
-            name: contactForm.name.value,
-            email: contactForm.email.value,
-            subject: contactForm.subject.value,
-            message: contactForm.message.value
-        };
-        // Reemplaza 'TU_SERVICE_ID', 'TU_TEMPLATE_ID' con tus datos de EmailJS
-        emailjs.send('service_pfpaubi', 'template_2ussk2c', formData)
-            .then(function() {
-                formStatus.textContent = '¡Mensaje enviado!';
-                contactForm.reset();
-            }, function(error) {
-                formStatus.textContent = 'Error al enviar. Intenta de nuevo.';
-            });
+// --- MODAL DE PROYECTOS ---
+// Datos de ejemplo para imágenes y descripciones de proyectos
+let projectData = [
+    {
+        title: 'Aplicación gestión de donantes',
+        images: [
+            'img/Banco-1.png',
+            'img/Banco-2.png',
+            'img/Banco-3.png'
+        ],
+        description: 'Plataforma desarrollada y pensada para estudiantes de hemoterapia del hospital de Paysandú.'
+    },
+    {
+        title: 'Aplicación de gestión para el sector de transporte.',
+        images: [
+            'img/transporte-1.png',
+            'img/transporte-2.png',
+            'img/transporte-3.png'
+        ],
+        description: 'Componente diseñado para gestionar y administrar contactos así como datos correspondientes al sector transporte.'
+    },
+    {
+        title: 'Cartelera digital para institución.',
+        images: [
+            'img/Cartelera-1.png',
+            'img/Cartelera-2.png',
+            'img/Cartelera-3.png'
+        ],
+        description: 'Implementación pensada para administrar y visualizar cursos, grupos, turnos así como eventos y comunicados oficiales.'
+    }
+];
+
+// Función para cambiar idioma
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('language', lang);
+    
+    // Actualizar elementos con data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let value = translations[lang];
+        keys.forEach(k => value = value[k]);
+        if (value) element.textContent = value;
     });
+    
+    // Actualizar botón de idioma
+    const langBtn = document.getElementById('lang-toggle');
+    langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+    
+    // Actualizar projectData para el modal
+    updateProjectData(lang);
 }
+
+// Función para actualizar projectData según idioma
+function updateProjectData(lang) {
+    projectData[0].title = translations[lang].projects.donantes.title;
+    projectData[0].description = translations[lang].projects.donantes.desc;
+    projectData[1].title = translations[lang].projects.transporte.title;
+    projectData[1].description = translations[lang].projects.transporte.desc;
+    projectData[2].title = translations[lang].projects.cartelera.title;
+    projectData[2].description = translations[lang].projects.cartelera.desc;
+}
+
+// Event listener para el botón de idioma
+document.getElementById('lang-toggle').addEventListener('click', () => {
+    const currentLang = document.documentElement.lang || 'es';
+    const newLang = currentLang === 'es' ? 'en' : 'es';
+    setLanguage(newLang);
+});
+
+// Cargar idioma al inicio
+const savedLang = localStorage.getItem('language') || 'es';
+setLanguage(savedLang);
+
 // Menú móvil
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('active');
@@ -85,38 +330,6 @@ document.querySelectorAll('.card, .skill-item, .project-card').forEach(item => {
     observer.observe(item);
 });
 
-
-// --- MODAL DE PROYECTOS ---
-// Datos de ejemplo para imágenes y descripciones de proyectos
-const projectData = [
-    {
-        title: 'Aplicación gestión de donantes',
-        images: [
-            'img/Banco-1.png',
-            'img/Banco-2.png',
-            'img/Banco-3.png'
-        ],
-        description: 'Plataforma desarrollada y pensada para estudiantes de hemoterapia del hospital de Paysandú.'
-    },
-    {
-        title: 'Aplicación de gestión para el sector de transporte.',
-        images: [
-            'img/transporte-1.png',
-            'img/transporte-2.png',
-            'img/transporte-3.png'
-        ],
-        description: 'Componente diseñado para gestionar y administrar contactos así como datos correspondientes al sector transporte.'
-    },
-    {
-        title: 'Cartelera digital para institución.',
-        images: [
-            'img/Cartelera-1.png',
-            'img/Cartelera-2.png',
-            'img/Cartelera-3.png'
-        ],
-        description: 'Implementación pensada para administrar y visualizar cursos, grupos, turnos así como eventos y comunicados oficiales.'
-    }
-];
 
 const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('modal-title');
