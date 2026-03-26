@@ -181,6 +181,25 @@ nav {
     z-index: 0;
 }
 
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 
 @keyframes heroImgGlow {
     from {
