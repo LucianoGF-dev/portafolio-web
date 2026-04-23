@@ -32,181 +32,247 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-<section class="hero">
+<!-- Hero Section -->
+<section class="hero" id="home" aria-label="Sección principal de presentación">
     <div class="container">
         <div class="hero-content hero-flex">
             <div class="hero-img-wrapper">
-                <img src="Perfil.jpeg" alt="Perfil" class="img-perfil-hero">
+                <img src="Perfil.jpeg" alt="Foto profesional de perfil" class="img-perfil-hero" loading="lazy">
             </div>
+            
             <div class="hero-text">
-                <h1>Desarrollador Web</h1>
-                <p>Creando soluciones digitales innovadoras con tecnologías modernas y un enfoque centrado en el usuario.</p>
+                <span class="hero-badge">Desarrollo Web & Gestión Administrativa</span>
+                <h1>Impulso negocios con <span class="highlight">tecnología</span> y <span class="highlight">organización</span></h1>
+                <p>Profesional con experiencia en desarrollo de soluciones digitales y optimización de procesos administrativos. Combino código limpio, interfaces intuitivas y metodologías de gestión para escalar operaciones con eficiencia.</p>
                 
                 <div class="hero-buttons">
-    <a href="#projects" class="btn">Ver Proyectos</a>
-
-    <a href="Luciano-Guerrero-CV-ES.pdf" 
-       class="btn btn-secondary" 
-       download>
-       Descargar CV (ES)
-    </a>
-
-    <!--<a href="Luciano-Guerrero-CV-EN.pdf" 
-       class="btn btn-secondary" 
-       download>
-       Descargar CV (EN)
-    </a>-->
-</div>
-
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <!-- Asegúrate de colocar la ruta real a tu CV -->
+                    <a href="Luciano-Guerrero-CV-ES.pdf" class="btn btn-secondary" download="CV_Luciano_Guerrero.pdf">Descargar CV (ES)</a>
+                    <!-- <a href="CV_Dev_Admin_EN.pdf" class="btn btn-secondary" download="CV_Dev_Admin_EN.pdf">Download CV (EN)</a> -->
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Acerca de mí -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>Acerca de mí</h2>
-            </div>
-            <div class="cards-container">
-                <div class="card">
-                    <h3>Mi Historia</h3>
-                    <p>Soy un desarrollador apasionado con 3 años de experiencia en el desarrollo de aplicaciones web. Me especializo en crear soluciones eficientes y escalables utilizando las últimas tecnologías.</p>
-                </div>
-                <div class="card">
-                    <h3>Mi Misión</h3>
-                    <p>Transformar ideas en experiencias digitales que resuelvan problemas reales y generen valor para los usuarios y las empresas.</p>
-                </div>
-                <div class="card">
-                    <h3>Mi Enfoque</h3>
-                    <p>Combino creatividad, pensamiento lógico y atención al detalle para desarrollar productos.</p>
-                </div>
-            </div>
+ <!-- ===================== -->
+<!-- ACERCA DE MÍ -->
+<!-- ===================== -->
+<section id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>Acerca de mí</h2>
         </div>
-    </section>
 
-   <!-- Habilidades Técnicas -->
+        <div class="cards-container">
+
+            <div class="card">
+                <h3>Mi Perfil</h3>
+                <p>
+                    Soy Tecnólogo en Informática con experiencia en desarrollo de aplicaciones web
+                    y gestión administrativa. Combino habilidades técnicas y organizativas para
+                    optimizar procesos, gestionar información y crear soluciones digitales eficientes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Mi Misión</h3>
+                <p>
+                    Transformar ideas en soluciones digitales funcionales que mejoren la gestión,
+                    automaticen procesos y generen valor tanto para usuarios como para organizaciones.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Mi Enfoque</h3>
+                <p>
+                    Integro tecnología y gestión administrativa para desarrollar soluciones prácticas,
+                    optimizar tareas y mejorar la organización de la información en entornos digitales.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== -->
+<!-- HABILIDADES -->
+<!-- ===================== -->
 <section id="skills">
   <div class="container">
+
     <div class="section-title">
-      <h2>Habilidades Técnicas</h2>
+      <h2>Habilidades</h2>
     </div>
 
     <!-- FRONTEND -->
     <h3 class="skills-subtitle">Frontend</h3>
     <div class="skills-grid">
+
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
-        <div><h4>HTML5</h4></div>
+        <h4>HTML5</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
-        <div><h4>CSS3</h4></div>
+        <h4>CSS3</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-js-square"></i></div>
-        <div><h4>JavaScript</h4></div>
+        <h4>JavaScript</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-        <div><h4>TypeScript</h4></div>
+        <h4>TypeScript</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-react"></i></div>
-        <div><h4>React</h4></div>
+        <h4>React</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
-        <div><h4>Bootstrap</h4></div>
+        <h4>Bootstrap</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-js"></i></div>
-        <div><h4>Vite</h4></div>
+        <h4>Vite</h4>
       </div>
+
     </div>
 
     <!-- BACKEND -->
     <h3 class="skills-subtitle">Backend</h3>
     <div class="skills-grid">
+
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-        <div><h4>Node.js</h4></div>
+        <h4>Node.js</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-brands fa-php"></i></div>
-        <div><h4>PHP</h4></div>
+        <h4>PHP</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-brands fa-laravel"></i></div>
-        <div><h4>Laravel</h4></div>
+        <h4>Laravel</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-java"></i></div>
-        <div><h4>Java</h4></div>
+        <h4>Java</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fas fa-database"></i></div>
-        <div><h4>SQL</h4></div>
+        <h4>SQL</h4>
       </div>
+
     </div>
 
     <!-- HERRAMIENTAS -->
     <h3 class="skills-subtitle">Herramientas</h3>
     <div class="skills-grid">
+
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-        <div><h4>Git</h4></div>
+        <h4>Git</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-github"></i></div>
-        <div><h4>GitHub</h4></div>
+        <h4>GitHub</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fab fa-npm"></i></div>
-        <div><h4>npm</h4></div>
+        <h4>npm</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
-        <div><h4>CLI / Terminal</h4></div>
+        <h4>CLI / Terminal</h4>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-        <div><h4>VS Code</h4></div>
+        <h4>VS Code</h4>
       </div>
+
+    </div>
+
+    <!-- ADMINISTRATIVAS -->
+    <h3 class="skills-subtitle">Administrativas</h3>
+    <div class="skills-grid">
+
+      <div class="skill-item">
+        <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
+        <div>
+          <h4>Gestión documental</h4>
+          <p>Organización y control de archivos físicos y digitales</p>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon"><i class="fas fa-table"></i></div>
+        <div>
+          <h4>Microsoft Excel</h4>
+          <p>Gestión y análisis de datos</p>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <h4>Gestión de correos</h4>
+          <p>Comunicación y seguimiento de consultas</p>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon"><i class="fas fa-folder-open"></i></div>
+        <div>
+          <h4>Carga de datos</h4>
+          <p>Registro y actualización de información</p>
+        </div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon"><i class="fas fa-calendar-check"></i></div>
+        <div>
+          <h4>Organización</h4>
+          <p>Planificación de tareas y gestión de agenda</p>
+        </div>
+      </div>
+
     </div>
 
     <!-- HABILIDADES BLANDAS -->
     <h3 class="skills-subtitle">Habilidades Blandas</h3>
     <div class="skills-grid">
+
       <div class="skill-item">
         <div class="skill-icon"><i class="fas fa-comments"></i></div>
         <div>
           <h4>Comunicación</h4>
-          <p>Capacidad para comunicar ideas técnicas</p>
+          <p>Capacidad para transmitir ideas técnicas y administrativas</p>
         </div>
       </div>
 
       <div class="skill-item">
         <div class="skill-icon"><i class="fas fa-users"></i></div>
         <div>
-          <h4>Trabajo en Equipo</h4>
-          <p>Colaboración efectiva en equipos multidisciplinarios</p>
+          <h4>Trabajo en equipo</h4>
+          <p>Colaboración en entornos multidisciplinarios</p>
         </div>
       </div>
 
@@ -214,7 +280,7 @@
         <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
         <div>
           <h4>Pensamiento crítico</h4>
-          <p>Resolución analítica de problemas</p>
+          <p>Análisis y resolución de problemas</p>
         </div>
       </div>
 
@@ -222,7 +288,7 @@
         <div class="skill-icon"><i class="fas fa-ear-listen"></i></div>
         <div>
           <h4>Escucha activa</h4>
-          <p>Comprensión efectiva de necesidades</p>
+          <p>Comprensión de necesidades del usuario</p>
         </div>
       </div>
 
@@ -233,26 +299,7 @@
           <p>Organización y toma de decisiones</p>
         </div>
       </div>
-    </div>
 
-    <!-- CERTIFICACIONES -->
-    <h3 class="skills-subtitle">Cursos y Certificaciones</h3>
-    <div class="skills-grid">
-      <div class="skill-item card">
-        <div class="skill-icon"><i class="fas fa-certificate"></i></div>
-        <div>
-          <h4>Inglés</h4>
-          <p>Fortalecimiento de inglés<br><span class="cert-date">2020 - 2022</span></p>
-        </div>
-      </div>
-
-      <div class="skill-item card">
-        <div class="skill-icon"><i class="fas fa-certificate"></i></div>
-        <div>
-          <h4>Inglés (Linguaskill B1)</h4>
-          <p>Nivel intermedio<br><span class="cert-date">2025</span></p>
-        </div>
-      </div>
     </div>
 
   </div>
