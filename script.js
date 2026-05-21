@@ -1,27 +1,110 @@
-// Inicializar EmailJS (reemplaza con tu userID de EmailJS)
-emailjs.init('iue1o-aumZvmMhLaV');
+/* ========================================
+   ENVÍO DE FORMULARIO CON EMAILJS
+   ======================================== */
 
-// Envío de formulario de contacto con EmailJS
+// 🔑 CONFIGURACIÓN - Reemplaza con tus credenciales de EmailJS
+const EMAILJS_CONFIG = {
+    publicKey: 'iue1o-aumZvmMhLaV',        // Ej: 'user_abc123xyz'
+    serviceId: 'service_pfpaubi',        // Ej: 'service_gmail'
+    templateId: 'template_2ussk2c'       // Ej: 'template_contacto'
+};
+
+// Inicializar EmailJS (solo una vez)
+if (typeof emailjs !== 'undefined') {
+    emailjs.init(EMAILJS_CONFIG.publicKey);
+}
+
 const contactForm = document.querySelector('.contact-form form');
 const formStatus = document.getElementById('form-status');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        formStatus.textContent = '';
-        const formData = {
-            name: contactForm.name.value,
-            email: contactForm.email.value,
-            subject: contactForm.subject.value,
-            message: contactForm.message.value
-        };
-        // Reemplaza 'TU_SERVICE_ID', 'TU_TEMPLATE_ID' con tus datos de EmailJS
-        emailjs.send('service_pfpaubi', 'template_2ussk2c', formData)
-            .then(function() {
-                formStatus.textContent = '¡Mensaje enviado!';
-                contactForm.reset();
-            }, function(error) {
-                formStatus.textContent = 'Error al enviar. Intenta de nuevo.';
-            });
+        
+        // Referencias a campos
+        const nameInput = contactForm.name;
+        const emailInput = contactForm.email;
+        const subjectInput = contactForm.subject;
+        const messageInput = contactForm.message;
+        
+        // UI: Estado de carga
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        try {
+            // 🔒 Validación básica
+            if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
+                throw new Error('Por favor completa los campos obligatorios');
+            }
+            
+            // 📧 Preparar datos MAPEADOS a tu plantilla HTML
+            const templateParams = {
+                from_name: nameInput.value.trim(),           // → {{from_name}}
+                from_email: emailInput.value.trim(),         // → {{from_email}}
+                reply_to: emailInput.value.trim(),           // → {{reply_to}}
+                message: messageInput.value.trim(),          // → {{message}}
+                subject: subjectInput.value.trim() || 'Nuevo mensaje desde el sitio web',
+                date: new Date().toLocaleDateString('es-UY', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                }) // → {{date}}
+            };
+            
+            // 🔄 Mostrar estado de envío
+            formStatus.textContent = 'Enviando...';
+            formStatus.className = '';
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            
+            // 📤 Enviar con EmailJS
+            const response = await emailjs.send(
+                EMAILJS_CONFIG.serviceId,
+                EMAILJS_CONFIG.templateId,
+                templateParams
+            );
+            
+            // ✅ Éxito
+            console.log('Email enviado:', response);
+            formStatus.textContent = '¡Mensaje enviado! Te responderé pronto.';
+            formStatus.classList.add('success');
+            contactForm.reset();
+            
+        } catch (error) {
+            // ❌ Error
+            console.error('Error al enviar email:', error);
+            formStatus.textContent = error.message || 'Error al enviar. Verifica tu conexión e intenta nuevamente.';
+            formStatus.classList.add('error');
+            
+        } finally {
+            // 🔄 Restaurar botón
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+            
+            // Limpiar mensaje después de 5 segundos
+            setTimeout(() => {
+                if (formStatus.textContent) {
+                    formStatus.textContent = '';
+                    formStatus.className = '';
+                }
+            }, 5000);
+        }
+    });
+    
+    // ✨ Feedback visual en tiempo real (opcional pero recomendado)
+    const inputs = contactForm.querySelectorAll('.form-control');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.validity.valid) {
+                this.style.borderColor = 'var(--primary)';
+            }
+        });
+        input.addEventListener('input', function() {
+            if (formStatus.classList.contains('error')) {
+                formStatus.textContent = '';
+                formStatus.classList.remove('error');
+            }
+        });
     });
 }
 // Menú móvil
