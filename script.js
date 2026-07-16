@@ -173,6 +173,33 @@ document.querySelectorAll('.card, .skill-item, .project-card').forEach(item => {
 // Datos de ejemplo para imágenes y descripciones de proyectos
 const projectData = [
     {
+        title: 'Aplicacion web de empresa RootCli.',
+        images: [
+            'img/rootcli-1.png',
+            'img/rootcli-2.png',
+            'img/rootcli-3.png'
+        ],
+        description: 'Desarrollo e implementación de una aplicación web para la empresa RootCli.'
+    },
+    {
+        title: 'Sistema web de gestión para institución tecnológica.',
+        images: [
+            'img/tecnologica-1.png',
+            'img/tecnologica-2.png',
+            'img/tecnologica-3.png'
+        ],
+        description: 'Sistema web desarrollado para la gestión de cursos, grupos y turnos de una institución tecnológica.'
+    },
+    {
+        title: 'Sistema web de e-commerce para clientes.',
+        images: [
+            'img/ecommerce-1.png',
+            'img/ecommerce-2.png',
+            'img/ecommerce-3.png'
+        ],
+        description: 'Sistema web desarrollado para la gestión de productos y pedidos en una tienda virtual.'
+    },
+    {
         title: 'Aplicación gestión de donantes',
         images: [
             'img/Banco-1.png',
@@ -199,6 +226,7 @@ const projectData = [
         ],
         description: 'Implementación pensada para administrar y visualizar cursos, grupos, turnos así como eventos y comunicados oficiales.'
     }
+    
 ];
 
 const modal = document.getElementById('project-modal');
@@ -238,5 +266,40 @@ closeModalBtn.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.style.display = 'none';
+    }
+});
+
+// ====== VISOR DE IMÁGENES ======
+
+const imageViewer = document.getElementById("image-viewer");
+const viewerImage = document.getElementById("viewer-image");
+const closeViewer = document.querySelector(".close-viewer");
+
+// Abrir imagen grande
+document.addEventListener("click", function(e){
+
+    if(e.target.closest("#modal-images img")){
+        viewerImage.src = e.target.src;
+        imageViewer.style.display = "flex";
+    }
+
+});
+
+// Cerrar con la X
+closeViewer.addEventListener("click", ()=>{
+    imageViewer.style.display = "none";
+});
+
+// Cerrar haciendo clic fuera
+imageViewer.addEventListener("click",(e)=>{
+    if(e.target===imageViewer){
+        imageViewer.style.display="none";
+    }
+});
+
+// Cerrar con ESC
+document.addEventListener("keydown",(e)=>{
+    if(e.key==="Escape"){
+        imageViewer.style.display="none";
     }
 });

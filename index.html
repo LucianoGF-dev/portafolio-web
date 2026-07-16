@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
     <!-- Header y Navegación -->
     <header>
@@ -361,11 +362,67 @@
                 <h2>Proyectos</h2>
             </div>
 
+
+
             <div class="projects-grid">
+
+                 <div class="project-card">
+                    <div class="project-img">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Aplicacion web de empresa RootCli.</h3>
+                        <p>Desarrollo e implementación de una aplicación web para la empresa RootCli. </p>
+                        <div class="project-tags">
+                            <span class="project-tag">html</span>
+                            <span class="project-tag">css</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">vercel</span>
+                        </div>
+                        <a href="#" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+
+                 <div class="project-card">
+                    <div class="project-img">
+                      <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema web de gestión para institución tecnológica.</h3>
+                        <p>Desarrollo de un sistema web para la gestión y administración de datos en una institución tecnológica.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">html</span>
+                            <span class="project-tag">css</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                        <a href="#" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema web de e-commerce para clientes.</h3>
+                        <p>Desarrollo de un sistema web para la gestión y administración de productos y pedidos en una tienda virtual.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">html</span>
+                            <span class="project-tag">css</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Laravel</span>
+                        </div>
+                        <a href="#" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-img">
                         <i class="fa-solid fa-droplet"></i>
                     </div>
+                    
                     <div class="project-content">
                         <h3>Aplicación gestión de donantes</h3>
                         <p>Plataforma desarollada y pensada para estudiantes de hemoterapia del hospital de paysandú.
@@ -413,6 +470,7 @@
                         <a href="#" class="btn">Ver Detalles</a>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -491,10 +549,10 @@
     <div class="container">
         <!-- Solo íconos en social-links -->
         <div class="social-links">
-            <a href="" class="social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/luciano-guerrero/" class="social-link" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="" class="social-link" aria-label="GitHub">
+            <a href="https://github.com/LucianoGF-dev" class="social-link" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
         </div>
@@ -513,7 +571,14 @@
             <div id="modal-description"></div>
         </div>
     </div>
+
+    <div id="image-viewer" class="image-viewer">
+    <span class="close-viewer">&times;</span>
+    <img id="viewer-image" src="" alt="">
+</div>
+
     <script src="script.js"></script>
+
 
     <script>
         // Agrega al final de script.js o en un script separado
@@ -526,6 +591,8 @@
             }
         }, { passive: true });
     </script>
+
+
 
 
 </body>
