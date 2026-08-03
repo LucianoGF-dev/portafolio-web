@@ -8,7 +8,7 @@ El sitio funciona como una carta de presentación digital donde se pueden conoce
 
 ## 🌐 Demo
 
-**Producción:** [https://tu-dominio.com](https://luciano-guerrero-dev.vercel.app/)
+**Producción:** [https://luciano-guerrero-portafolio.com](https://luciano-guerrero-dev.vercel.app/)
 
 **Respaldo:** Oracle Cloud Infrastructure (Docker + Nginx Proxy Manager)
 
@@ -135,7 +135,7 @@ Mostrar mi experiencia en desarrollo web e infraestructura mediante un portafoli
 
 Tecnólogo en Informática
 
-Portfolio: [https://tu-dominio.com](https://luciano-guerrero-dev.vercel.app/)
+Portfolio: [https://luciano-guerrero-portafolio.com](https://luciano-guerrero-dev.vercel.app/)
 
 ---
 
