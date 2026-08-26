@@ -173,6 +173,14 @@ document.querySelectorAll('.card, .skill-item, .project-card').forEach(item => {
 // Datos de ejemplo para imágenes y descripciones de proyectos
 const projectData = [
     {
+        title: 'Ecommerce Data Analytics',
+        images: [
+            'img/analytics_1.png',
+            'img/analytics_2.png',
+            'img/analytics_3.png'
+        ],
+        description: 'Análisis de datos para una tienda online, implementando soluciones de visualización y reporting.'
+    }, {
         title: 'Aplicacion web de empresa RootCli.',
         images: [
             'img/rootcli-1.png',
